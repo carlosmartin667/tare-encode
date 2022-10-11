@@ -1,6 +1,6 @@
-﻿using BackEndActividadUsuarios.DTOs;
-using BackEndActividadUsuarios.Servicios.CredencialesUsuario;
+﻿using DTO;
 using Microsoft.AspNetCore.Mvc;
+using Servicios.CredencialesUsuario;
 
 namespace BackEndActividadUsuarios.Controllers
 {

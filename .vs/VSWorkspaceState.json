@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Frontend",
+    "\\Frontend\\frontend-usuario"
   ],
-  "SelectedNode": "\\C:\\Users\\Incluit\\Documents\\tarea-encode",
+  "SelectedNode": "\\Frontend",
   "PreviewInSolutionExplorer": false
 }
