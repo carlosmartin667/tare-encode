@@ -27,10 +27,10 @@
             <td>{{ item.paisResidencia }}</td>
             <td>{{ item.informacionContacto }}</td>
              <td>
-              <button type="button" (click)="remover(item.id)" class="btn btn-danger">Danger</button>
-              <button type="button" class="btn btn-warning">Warning</button>
+              <button type="button" (click)="remover(item.id)" class="btn btn-danger">Eliminar</button>
+              <button type="button" class="btn btn-warning">Editar</button>
 
-              <a class="btn btn-info" href="{{'/listaUsuario/'+item.id}}">Info </a>
+              <a class="btn btn-info" href="{{'/listaUsuario/'+item.id}}">mas info </a>
 
              </td>
           </tr>

@@ -1,4 +1,5 @@
 ﻿using DTO;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Servicios.CredencialesUsuario;
 
@@ -6,6 +7,7 @@ namespace BackEndActividadUsuarios.Controllers
 {
     [ApiController]
     [Route("api/CredencialesUsuario")]
+    [EnableCors]
     public class CredencialesUsuarioController : ControllerBase
     {
         public ICredencialesUsuarioServices _credencialesUsuarioServices { get; }
@@ -29,11 +31,12 @@ namespace BackEndActividadUsuarios.Controllers
             var resultado = await _credencialesUsuarioServices.GetCredencialesUsuario(id);
             return resultado;
         }
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CredencialesUsuarioDTO))]
         [HttpPost]
-        public async Task<ActionResult> Post(CredencialesUsuarioDTO credencialesUsuario)
+        [Route("[action]")]
+        public async Task<ActionResult> Post([FromBody] CredencialesUsuarioDTO credencialesUsuarioModel)
         {
-
-            await _credencialesUsuarioServices.PostCredencialesUsuario(credencialesUsuario);
+            await _credencialesUsuarioServices.PostCredencialesUsuario(credencialesUsuarioModel);
             return Ok();
         }
         [HttpPut("(id:int)")]
