@@ -7,7 +7,6 @@ namespace BackEndActividadUsuarios.Controllers
 {
     [ApiController]
     [Route("api/CredencialesUsuario")]
-    [EnableCors]
     public class CredencialesUsuarioController : ControllerBase
     {
         public ICredencialesUsuarioServices _credencialesUsuarioServices { get; }

@@ -152,3 +152,4 @@ C:\Users\Incluit\Documents\tarea-encode\BackEnd\BackEndActividadUsuarios\BackEnd
 C:\Users\Incluit\Documents\tarea-encode\BackEnd\BackEndActividadUsuarios\BackEndActividadUsuarios\obj\Debug\net6.0\BackEndActividadUsuarios.csproj.CopyComplete
 C:\Users\Incluit\Documents\tarea-encode\BackEnd\BackEndActividadUsuarios\BackEndActividadUsuarios\obj\Debug\net6.0\BackEndActividadUsuarios.genruntimeconfig.cache
 C:\Users\Incluit\Documents\tarea-encode\BackEnd\BackEndActividadUsuarios\BackEndActividadUsuarios\obj\Debug\net6.0\ref\BackEndActividadUsuarios.dll
+C:\Users\Incluit\Documents\tarea-encode\BackEnd\BackEndActividadUsuarios\BackEndActividadUsuarios\obj\Debug\net6.0\BackEndActividadUsuarios.MvcApplicationPartsAssemblyInfo.cs
