@@ -28,6 +28,17 @@ export class FormularioComponent implements OnInit {
           showConfirmButton: false,
           timer: 4000,
         });
+        this.clear();
       });
+  }
+
+  clear() {
+   this.credencialesUsuarioModel.nombre = '';
+   this.credencialesUsuarioModel.apellido = '';
+   this.credencialesUsuarioModel.correoElectronico = '';
+   this.credencialesUsuarioModel.fechaNacimiento = '';
+   this.credencialesUsuarioModel.telefono = 0;
+   this.credencialesUsuarioModel.paisResidencia = '';
+   this.credencialesUsuarioModel.informacionContacto = false;
   }
 }
