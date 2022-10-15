@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 import { UsuarioServicio } from '../services/usuario.service';
 
 @Component({
@@ -7,21 +8,30 @@ import { UsuarioServicio } from '../services/usuario.service';
 })
 export class ListaComponent implements OnInit {
   credencialesUsuarioList: Array<any> = [];
-  constructor(private usuarioServicio: UsuarioServicio) {
-    usuarioServicio.getcredencialesUsuario().subscribe((res: any) => {
+
+  constructor(private usuarioServicio: UsuarioServicio) {}
+
+  onDataTable() {
+    this.usuarioServicio.getcredencialesUsuario().subscribe((res: any) => {
       this.credencialesUsuarioList = res;
     });
   }
-  get usuario() {
-    return this.usuarioServicio.saludar;
+
+  async remover(id: any) {
+    await this.usuarioServicio
+      .deletecredencialesUsuario(id)
+      .subscribe((res: any) => {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: `el ususario fue eliminado con exito!`,
+          showConfirmButton: false,
+          timer: 4000,
+        });
+        this.onDataTable();
+      });
   }
-  async remover (id: any)  {
-   await this.usuarioServicio.deletecredencialesUsuario(id).subscribe((res: any) => {
-      console.log(res);
-    });
-   await this.usuarioServicio.getcredencialesUsuario().subscribe((res: any) => {
-     this.credencialesUsuarioList = res;
-   });
+  ngOnInit(): void {
+    this.onDataTable();
   }
-  ngOnInit(): void {}
 }
