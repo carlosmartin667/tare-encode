@@ -12,7 +12,7 @@ export class UsuarioServicio {
     return this.http.get(this.url);
   }
   getcredencialesUsuarioDetalle(id:any) {
-    return this.http.get(this.url + id);
+    return this.http.get(this.url + '/' + id);
   }
   deletecredencialesUsuario(id: number) {
     return this.http.delete(this.url + '/' + id);

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CredencialesUsuarioModel } from '../models/CredencialesUsuarioModel';
+import { UsuarioServicio } from '../services/usuario.service';
 
 @Component({
   selector: 'app-editar',
@@ -10,11 +11,23 @@ export class EditarComponent implements OnInit {
   credencialesUsuarioModel: CredencialesUsuarioModel =
     new CredencialesUsuarioModel();
 
-  constructor(private rutaActiva: ActivatedRoute) {}
+  constructor(
+    private rutaActiva: ActivatedRoute,
+    private usuarioServicio: UsuarioServicio
+  ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.onGetcredencialesUsuarioDetalle();
+  }
 
   onEditarCredencialesUsuario(
     credencialesUsuarioModel: CredencialesUsuarioModel
   ) {}
+  onGetcredencialesUsuarioDetalle() {
+    this.usuarioServicio
+      .getcredencialesUsuarioDetalle(this.rutaActiva.snapshot.params['id'])
+      .subscribe((res: any) => {
+        this.credencialesUsuarioModel = res;
+      });
+  }
 }
