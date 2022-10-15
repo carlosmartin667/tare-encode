@@ -38,13 +38,13 @@ namespace BackEndActividadUsuarios.Controllers
             await _credencialesUsuarioServices.PostCredencialesUsuario(credencialesUsuarioModel);
             return Ok();
         }
-        [HttpPut("(id:int)")]
+        [HttpPut("{id:int}")]
         public async Task<ActionResult> Put(CredencialesUsuarioDTO credencialesUsuario, int id)
         {
             await _credencialesUsuarioServices.PutCredencialesUsuario(credencialesUsuario, id);
             return NoContent();
         }
-        [HttpDelete("(id:int)")]
+        [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
         {
             await _credencialesUsuarioServices.DeleteCredencialesUsuario(id);

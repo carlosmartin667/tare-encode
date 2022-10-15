@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { UsuarioServicio } from '../services/usuario.service';
 import { ActivatedRoute, Params } from '@angular/router';
 @Component({
