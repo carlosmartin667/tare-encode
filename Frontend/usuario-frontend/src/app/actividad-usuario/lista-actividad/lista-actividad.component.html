@@ -1,19 +1,20 @@
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">actividad</th>
-      <th scope="col">fecha de la actividad </th>
-      <th scope="col">id usuario</th>
-
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let item of actividadUsuarioList">
-      <th>{{item.actividad}}</th>
-      <td>{{item.create_date}}</td>
-      <td>{{item.id_usuario}}</td>
-
-    </tr>
-
-  </tbody>
-</table>
+<div class="container">
+  <div class="row">
+    <table class="table table-bordered mt-4">
+      <thead>
+        <tr>
+          <th scope="col">actividad</th>
+          <th scope="col">fecha de la actividad</th>
+          <th scope="col">id usuario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of actividadUsuarioList">
+          <th>{{ item.actividad }}</th>
+          <td>{{ item.create_date }}</td>
+          <td>{{ item.id_usuario }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
