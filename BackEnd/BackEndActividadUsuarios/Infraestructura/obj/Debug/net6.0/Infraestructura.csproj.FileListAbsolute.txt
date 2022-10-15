@@ -15,3 +15,5 @@ C:\Users\Incluit\Documents\tarea-encode\BackEnd\BackEndActividadUsuarios\Infraes
 C:\Users\Incluit\Documents\tarea-encode\BackEnd\BackEndActividadUsuarios\Infraestructura\obj\Debug\net6.0\refint\Infraestructura.dll
 C:\Users\Incluit\Documents\tarea-encode\BackEnd\BackEndActividadUsuarios\Infraestructura\obj\Debug\net6.0\Infraestructura.pdb
 C:\Users\Incluit\Documents\tarea-encode\BackEnd\BackEndActividadUsuarios\Infraestructura\obj\Debug\net6.0\ref\Infraestructura.dll
+C:\Users\Incluit\Documents\tarea-encode\BackEnd\BackEndActividadUsuarios\Infraestructura\bin\Debug\net6.0\Infraestructura.runtimeconfig.json
+C:\Users\Incluit\Documents\tarea-encode\BackEnd\BackEndActividadUsuarios\Infraestructura\obj\Debug\net6.0\Infraestructura.genruntimeconfig.cache

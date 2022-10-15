@@ -644,7 +644,10 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "DTO": "1.0.0",
           "Entidades": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "6.0.10"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.10",
+          "Microsoft.EntityFrameworkCore": "6.0.10",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10"
         },
         "runtime": {
           "Infraestructura.dll": {}

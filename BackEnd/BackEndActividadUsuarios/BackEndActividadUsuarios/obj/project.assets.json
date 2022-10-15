@@ -1094,7 +1094,10 @@
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.0",
           "DTO": "1.0.0",
           "Entidades": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "6.0.10"
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.10",
+          "Microsoft.EntityFrameworkCore": "6.0.10",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.10"
         },
         "compile": {
           "bin/placeholder/Infraestructura.dll": {}
@@ -3042,7 +3045,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }
