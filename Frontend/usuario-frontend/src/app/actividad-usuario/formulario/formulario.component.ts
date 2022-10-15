@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CredencialesUsuarioModel } from '../models/CredencialesUsuarioModel';
 import { UsuarioServicio } from '../services/usuario.service';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-formulario',
@@ -18,16 +20,14 @@ export class FormularioComponent implements OnInit {
   ): void {
     this.usuarioServicio
       .addCredencialesUsuario(credencialesUsuarioModel)
-      .subscribe((res) => {
-        if (res) {
-          alert(
-            `el ususario ${credencialesUsuarioModel.nombre} se ha registrado con exito!`
-          );
-          // this.clear();
-          // this.onDataTable();
-        } else {
-          alert('Error! :(');
-        }
+      .subscribe(() => {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: `el ususario ${credencialesUsuarioModel.nombre} se ha registrado con exito!`,
+          showConfirmButton: false,
+          timer: 4000,
+        });
       });
   }
 }
