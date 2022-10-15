@@ -38,8 +38,10 @@ namespace BackEndActividadUsuarios.Controllers
             await _credencialesUsuarioServices.PostCredencialesUsuario(credencialesUsuarioModel);
             return Ok();
         }
+
+
         [HttpPut("{id:int}")]
-        public async Task<ActionResult> Put(CredencialesUsuarioDTO credencialesUsuario, int id)
+        public async Task<ActionResult> Put([FromBody] CredencialesUsuarioDTO credencialesUsuario, int id)
         {
             await _credencialesUsuarioServices.PutCredencialesUsuario(credencialesUsuario, id);
             return NoContent();

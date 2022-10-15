@@ -11,13 +11,19 @@ export class UsuarioServicio {
   getcredencialesUsuario() {
     return this.http.get(this.url);
   }
-  getcredencialesUsuarioDetalle(id:any) {
+  getcredencialesUsuarioDetalle(id: any) {
     return this.http.get(this.url + '/' + id);
   }
   deletecredencialesUsuario(id: number) {
     return this.http.delete(this.url + '/' + id);
   }
 
+  putCredencialesUsuario(credencialesUsuarioModel: CredencialesUsuarioModel,id:any) {
+    return this.http.put<CredencialesUsuarioModel>(
+      this.url + '/'+id,
+      credencialesUsuarioModel
+    );
+  }
   addCredencialesUsuario(
     credencialesUsuarioModel: CredencialesUsuarioModel
   ): Observable<CredencialesUsuarioModel> {
