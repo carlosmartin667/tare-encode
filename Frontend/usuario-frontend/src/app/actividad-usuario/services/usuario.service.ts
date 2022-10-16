@@ -18,9 +18,12 @@ export class UsuarioServicio {
     return this.http.delete(this.url + '/' + id);
   }
 
-  putCredencialesUsuario(credencialesUsuarioModel: CredencialesUsuarioModel,id:any) {
+  putCredencialesUsuario(
+    credencialesUsuarioModel: CredencialesUsuarioModel,
+    id: any
+  ) {
     return this.http.put<CredencialesUsuarioModel>(
-      this.url + '/'+id,
+      this.url + '/' + id,
       credencialesUsuarioModel
     );
   }
@@ -36,6 +39,11 @@ export class UsuarioServicio {
   getActividadesUsuario(id: any) {
     return this.http.get(
       'https://localhost:44350/api/ActividadesUsuario/' + id
+    );
+  }
+  getActividadesUsuarios() {
+    return this.http.get(
+      'https://localhost:44350/api/ActividadesUsuario'
     );
   }
   saludar: string = 'hola';

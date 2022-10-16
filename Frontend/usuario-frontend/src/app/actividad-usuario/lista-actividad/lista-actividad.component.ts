@@ -8,18 +8,27 @@ import { ActivatedRoute, Params } from '@angular/router';
 export class ListaActividadComponent implements OnInit {
   actividadUsuarioList: Array<any> = [];
 
-
   constructor(
     private usuarioServicio: UsuarioServicio,
     private rutaActiva: ActivatedRoute
-  ) {
+  ) {}
 
-    usuarioServicio
+  ngOnInit(): void {
+    this.onUsuarioServicio();
+  }
+
+  onUsuarioServicio() {
+    this.usuarioServicio
       .getActividadesUsuario(this.rutaActiva.snapshot.params['id'])
       .subscribe((res: any) => {
         this.actividadUsuarioList = res;
       });
   }
-
-  ngOnInit(): void {}
+  onUsuarioServicios() {
+    this.usuarioServicio
+      .getActividadesUsuarios()
+      .subscribe((res: any) => {
+        this.actividadUsuarioList = res;
+      });
+  }
 }

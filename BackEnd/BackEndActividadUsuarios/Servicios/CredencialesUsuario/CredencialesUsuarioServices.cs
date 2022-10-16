@@ -27,6 +27,7 @@ namespace Servicios.CredencialesUsuario
                 _context.Remove(new CredencialesUsuarioModel() { Id = id });
 
                 await _context.SaveChangesAsync();
+                await _actividadesUsuarioServices.ActividadesUsuarios(id, "Eliminacion de Usuario");
                 return true;
             }
             catch (Exception ex)

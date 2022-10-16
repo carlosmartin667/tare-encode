@@ -1,15 +1,23 @@
 <div class="container">
+  <button class="btn btn-outline-primary mt-4"  (click)="onUsuarioServicios()">ver todos</button>
   <div class="row">
-    <table class="table table-bordered mt-4">
-      <thead>
-        <tr>
+    <table class="table table-bordered table-hover mt-4">
+      <thead class="table-dark">
+        <tr class="text-center">
           <th scope="col">actividad</th>
           <th scope="col">fecha de la actividad</th>
           <th scope="col">id usuario</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of actividadUsuarioList">
+        <tr
+          *ngFor="let item of actividadUsuarioList"
+          [ngClass]="{
+            'table-warning': item.actividad === 'Actualización de Usuario',
+            'table-primary': item.actividad === 'Creacion de usuario',
+            'table-danger': item.actividad === 'Eliminacion de Usuario'
+          }"
+        >
           <th>{{ item.actividad }}</th>
           <td>{{ item.create_date }}</td>
           <td>{{ item.id_usuario }}</td>
